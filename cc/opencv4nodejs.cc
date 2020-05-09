@@ -135,4 +135,6 @@ void init(v8::Local<v8::Object> target) {
 #endif
 };
 
-NODE_MODULE(opencv4nodejs, init)
+NODE_MODULE_INIT() {
+	init(exports);
+}
